@@ -30,6 +30,18 @@ export default function App() {
                     label: "Campaigns",
                     destination: "/campaigns",
                   },
+                  {
+                    label: "Privacy",
+                    destination: "/privacypolicy",
+                  },
+                  {
+                    label: "Settings",
+                    destination: "/settings",
+                  },
+                  {
+                    label: "Payment Plan",
+                    destination: "/paymentplan",
+                  },
                 ]}
               />
               <Routes pages={pages} />
