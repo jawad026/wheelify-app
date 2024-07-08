@@ -1,22 +1,13 @@
 import {
-  Box,
-  Card,
-  Grid,
-  InlineStack,
   Page,
-  RadioButton,
-  Tabs,
-  Text,
-  TextField,
 } from "@shopify/polaris";
-import React, { Component, useCallback, useState } from "react";
-import Themes from "./creaetcampaign/Themes";
-import Layout from "./creaetcampaign/Layout";
-import ConversionBooster from "./creaetcampaign/ConversionBooster";
-import DisplayOptions from "./creaetcampaign/DisplayOptions";
-import AntiCheatSheet from "./creaetcampaign/AntiCheatSheet";
-import StepTabSystem from "./creaetcampaign/components/CustomTabs";
-import CreateCampaignForm from "./creaetcampaign/CreateCampaign";
+import Themes from "../pagecompnents/creaetcampaign/Themes";
+import Layout from "../pagecompnents/creaetcampaign/Layout";
+import ConversionBooster from "../pagecompnents/creaetcampaign/ConversionBooster";
+import DisplayOptions from "../pagecompnents/creaetcampaign/DisplayOptions";
+import AntiCheatSheet from "../pagecompnents/creaetcampaign/AntiCheatSheet";
+import StepTabSystem from "../pagecompnents/creaetcampaign/components/CustomTabs";
+import CreateCampaignForm from "../pagecompnents/creaetcampaign/CreateCampaign";
 
 const CreateCampaign = () => {
   const secondaryAction = [

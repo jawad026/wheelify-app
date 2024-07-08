@@ -12,7 +12,15 @@ import {
 import { MenuVerticalIcon } from "@shopify/polaris-icons";
 import MegaphoneFilledIcon from "../../../assets/Svg/MegaphoneFilled.svg";
 
-const CampaignsCard = ({ title, subtitle, status, impression, subscriber }) => {
+const CampaignsCard = ({
+  title,
+  subtitle,
+  status,
+  impression,
+  subscriber,
+  primaryButton,
+  secondaryButton,
+}) => {
   const [popoverActive, setPopoverActive] = useState(false);
 
   const togglePopoverActive = useCallback(
@@ -21,7 +29,11 @@ const CampaignsCard = ({ title, subtitle, status, impression, subscriber }) => {
   );
 
   const activator = (
-    <Button icon={MenuVerticalIcon} onClick={togglePopoverActive} size="medium" />
+    <Button
+      icon={MenuVerticalIcon}
+      onClick={togglePopoverActive}
+      size="medium"
+    />
   );
 
   return (
@@ -69,34 +81,42 @@ const CampaignsCard = ({ title, subtitle, status, impression, subscriber }) => {
         </Box>
       </Box>
       <Box paddingBlockEnd="400">
-        <Box paddingBlockStart="200">
-          <InlineStack align="start" gap="200">
-            <Text variant="bodyLg" fontWeight="semibold">
-              Status:
-            </Text>
-            <Text variant="bodyLg">{status}</Text>
-          </InlineStack>
-        </Box>
-        <Box paddingBlockStart="200">
-          <InlineStack align="start" gap="200">
-            <Text variant="bodyLg" fontWeight="semibold">
-              Impressions Count:
-            </Text>
-            <Text variant="bodyLg">{impression}</Text>
-          </InlineStack>
-        </Box>
-        <Box paddingBlockStart="200">
-          <InlineStack align="start" gap="200">
-            <Text variant="bodyLg" fontWeight="semibold">
-              Subscribers Count:
-            </Text>
-            <Text variant="bodyLg">{subscriber}</Text>
-          </InlineStack>
-        </Box>
+        {status !== "" && (
+          <Box paddingBlockStart="200">
+            <InlineStack align="start" gap="200">
+              <Text variant="bodyLg" fontWeight="semibold">
+                Status:
+              </Text>
+              <Text variant="bodyLg">{status}</Text>
+            </InlineStack>
+          </Box>
+        )}
+        {impression !== undefined && (
+          <Box paddingBlockStart="200">
+            <InlineStack align="start" gap="200">
+              <Text variant="bodyLg" fontWeight="semibold">
+                Impressions Count:
+              </Text>
+              <Text variant="bodyLg">{impression}</Text>
+            </InlineStack>
+          </Box>
+        )}
+        {subscriber !== undefined && (
+          <Box paddingBlockStart="200">
+            <InlineStack align="start" gap="200">
+              <Text variant="bodyLg" fontWeight="semibold">
+                Subscribers Count:
+              </Text>
+              <Text variant="bodyLg">{subscriber}</Text>
+            </InlineStack>
+          </Box>
+        )}
         <Box paddingBlockStart="400">
           <InlineStack align="start" gap="200">
-            <Button>Analytics</Button>
-            <Button variant="primary">Active Campaign</Button>
+            {primaryButton !== undefined && <Button>{primaryButton}</Button>}
+            {secondaryButton !== undefined && (
+              <Button variant="primary">{secondaryButton}</Button>
+            )}
           </InlineStack>
         </Box>
       </Box>

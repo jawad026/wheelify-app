@@ -13,7 +13,7 @@ const AnalyticsCard = ({ heading, subheading, percentage, count }) => {
   return (
     <BlockStack gap={"0"}>
       <Box paddingBlock={"200"}>
-        <Text variant="headingLg">{heading}</Text>
+        <Text variant="headingLg" >{heading}</Text>
         <Text variant="bodyLg" tone="subdued">
           {subheading}
         </Text>
@@ -21,12 +21,14 @@ const AnalyticsCard = ({ heading, subheading, percentage, count }) => {
       <Box paddingBlock={"200"}>
         <Text variant="headingXl">{count}</Text>
       </Box>
-      <Box paddingBlockStart={"100"}>
-        <InlineGrid columns={2} alignItems="center">
-          <Text variant="bodyLg">+{percentage}%</Text>
-          <Image source={LingSvg} alt="line" />
-        </InlineGrid>
-      </Box>
+      {percentage === "" && (
+        <Box paddingBlockStart={"100"}>
+          <InlineGrid columns={2} alignItems="center">
+            <Text variant="bodyLg">+{percentage}%</Text>
+            <Image source={LingSvg} alt="line" />
+          </InlineGrid>
+        </Box>
+      )}
     </BlockStack>
   );
 };

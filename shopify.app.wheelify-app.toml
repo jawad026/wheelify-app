@@ -3,7 +3,7 @@
 client_id = "261641ba6f72ca90064221cb5e9a18f2"
 name = "wheelify-app"
 handle = "wheelify-app-2"
-application_url = "https://conventions-literature-ethernet-cam.trycloudflare.com"
+application_url = "https://inside-medication-associations-terror.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://conventions-literature-ethernet-cam.trycloudflare.com/auth/callback",
-  "https://conventions-literature-ethernet-cam.trycloudflare.com/auth/shopify/callback",
-  "https://conventions-literature-ethernet-cam.trycloudflare.com/api/auth/callback"
+  "https://inside-medication-associations-terror.trycloudflare.com/auth/callback",
+  "https://inside-medication-associations-terror.trycloudflare.com/auth/shopify/callback",
+  "https://inside-medication-associations-terror.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

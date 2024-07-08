@@ -8,12 +8,12 @@ import {
   QueryProvider,
   PolarisProvider,
 } from "./components";
-import '@shopify/polaris-viz/build/esm/styles.css';
-import './style.css'
+import "@shopify/polaris-viz/build/esm/styles.css";
+import "./style.css";
 export default function App() {
   // Any .tsx or .jsx files in /pages will become a route
   // See documentation for <Routes /> for more info
-  const pages = import.meta.glob("./pages/!(*/*).([jt]sx)", {
+  const pages = import.meta.glob("./pages/**/*.[jt]sx", {
     eager: true,
   });
   const { t } = useTranslation();
@@ -29,6 +29,10 @@ export default function App() {
                   {
                     label: "Campaigns",
                     destination: "/campaigns",
+                  },
+                  {
+                    label: "Ab Testing",
+                    destination: "/abtesting",
                   },
                 ]}
               />

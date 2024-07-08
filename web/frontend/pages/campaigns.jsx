@@ -10,7 +10,7 @@ import {
 import CampaignsCard from "../components/ui/Campaigns/CampaignsCard";
 import AnalyticsCard from "../components/ui/AnalyticsCard/AnalyticsCard";
 import BannerNotification from "../components/ui/Banner/Banner";
-import { TitleBar } from "@shopify/app-bridge-react";
+
 const Campaigns = () => {
   const AnalyticsData = [
     {
@@ -71,7 +71,6 @@ const Campaigns = () => {
   return (
     <Page
       title="Spin Wheel Campaigns"
-      fullWidth
       secondaryActions={[
         {
           content: "Create Campaigns",
@@ -79,7 +78,6 @@ const Campaigns = () => {
         },
       ]}
     >
-
       <Box paddingBlock={"400"}>
         <Text variant="bodyLg" tone="subdued">
           Offer discount coupons, collect emails and boost sales with spin wheel
@@ -115,6 +113,8 @@ const Campaigns = () => {
             status={item.status}
             impression={item.impression}
             subscriber={item.subscriber}
+            primaryButton="Analysis"
+            secondaryButton={"Active Campiaigns"}
           />
         ))}
       </InlineStack>
