@@ -30,10 +30,6 @@ export default function App() {
                     label: "Campaigns",
                     destination: "/campaigns",
                   },
-                  {
-                    label: "Chatbot",
-                    destination: "/chatbot",
-                  },
                 ]}
               />
               <Routes pages={pages} />
