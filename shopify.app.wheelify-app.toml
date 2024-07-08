@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "261641ba6f72ca90064221cb5e9a18f2"
+name = "wheelify-app"
+handle = "wheelify-app-2"
+application_url = "https://conventions-literature-ethernet-cam.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "store-test553.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://conventions-literature-ethernet-cam.trycloudflare.com/auth/callback",
+  "https://conventions-literature-ethernet-cam.trycloudflare.com/auth/shopify/callback",
+  "https://conventions-literature-ethernet-cam.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false

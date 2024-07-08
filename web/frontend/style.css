@@ -1,0 +1,44 @@
+.input-color {
+  position: relative;
+  z-index: 20;
+}
+.color {
+  position: absolute;
+  top: 25px;
+  right: 8px;
+  border-radius: 4px;
+  z-index: 30;
+  width: 26px;
+  padding: 0px;
+  border: unset;
+  height: 30px;
+}
+
+.text-base {
+  font-size: 10px;
+}
+.w-fit {
+  background: rgb(200, 200, 233);
+  width: 200px;
+  height: 53px;
+  border-end-end-radius: 27px;
+  border-start-end-radius: 27px;
+  position: relative;
+}
+.flex {
+  display: flex;
+}
+.justify-end {
+  justify-content: end;
+}
+#spin {
+  position: absolute;
+  right: 0px;
+}
+.center {
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  top: 30%;
+  color: black;
+}

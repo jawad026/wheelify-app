@@ -1,0 +1,28 @@
+{
+  "name": "wheelify-app",
+  "version": "1.0.0",
+  "main": "web/index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy"
+  },
+  "author": "jawad.hassan@vaival.tech",
+  "private": true,
+  "workspaces": [
+    "extensions/*",
+    "web",
+    "web/frontend"
+  ],
+  "dependencies": {
+    "@shopify/app-bridge-react": "^3.1.0",
+    "@shopify/polaris-viz": "^14.0.0",
+    "highcharts": "^11.4.3",
+    "highcharts-react-official": "^3.2.1",
+    "prop-types": "^15.8.1"
+  }
+}
