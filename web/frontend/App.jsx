@@ -31,6 +31,18 @@ export default function App() {
                     destination: "/campaigns",
                   },
                   {
+                    label: "Privacy",
+                    destination: "/privacypolicy",
+                  },
+                  {
+                    label: "Settings",
+                    destination: "/settings",
+                  },
+                  {
+                    label: "Payment Plan",
+                    destination: "/paymentplan",
+                  },
+                  {
                     label: "Ab Testing",
                     destination: "/abtesting",
                   },
